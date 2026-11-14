@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Admin Dashboard</h1>
+
+        <button onclick="logout()">Logout</button>
+
+        <h2>Manage Events</h2>
+
+        <form id="eventForm">
+
+            <input type="hidden" id="eventId">
+
+            <input type="text" id="eventName"
+                   placeholder="Enter Event Name" required>
+
+            <input type="date" id="eventDate" required>
+
+            <input type="text" id="eventLocation"
+                   placeholder="Enter Event Location" required>
+
+            <button type="submit" id="submitBtn">
+                Add Event
+            </button>
+
+        </form>
+
+        <h2>Event List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="eventList"></tbody>
+
+        </table>
+
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>
